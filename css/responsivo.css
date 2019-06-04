@@ -1,0 +1,8 @@
+@media screen and (max-width: 980px) {
+    .menu-boostrap-responsivo {
+        display: block;
+    }
+    .menu-descktop {
+        display: none;
+    }
+}

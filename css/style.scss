@@ -1,0 +1,313 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat|Roboto';
+
+$claro: #ccc;
+$preto: #000;
+$branco: #fff;
+$escuro: #333;
+$red: #F00;
+$clarinho: #f1f1f1;
+$texto: Montserrat, Verdana, Tahoma;
+$titulo: Roboto, Tahoma;
+$corpadraoescuro: #0c0482;
+$fundoportifolio: #ececec;
+$azulmenu: #0c0482;
+
+@mixin mobile {
+    @media (max-width: 414px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 415px) and (max-width: 800px) {
+        @content;
+    }
+}
+
+* { margin: 0px; padding: 0px; text-decoration: none; box-sizing: border-box;} /*para definir tudo como padrao e o (*) serve para tudo o que vc for colocar na tela*/
+header{
+    float: left;
+    padding: 0px;
+
+}
+body {
+    padding:0px;
+    margin:0px;
+    background-color: #fff;
+    font-size: 62.5%;
+    background: #fff !important;
+}
+
+.img{
+    box-shadow: 0 0 20px #000;
+    margin: 20px 0;
+    background: #ccc;
+    padding: 5px 5px 50px 5px;
+}
+
+#container {
+    width: auto;
+    margin: 0px auto;
+    display: table;
+    margin-bottom: 15px;
+    margin-top: 50px;
+
+}
+header {
+    width: 100%;
+    float: left;
+}
+.menu ul {
+    padding:0px;
+    margin:0px;
+    float: right;
+    list-style:none;
+}
+.menu ul li { display: inline;
+}
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+    padding: 0px;
+    float: left;
+    font-size: 1.09em;
+    margin-top: 0px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.4s ease;
+    font-family: "Myriad Pro Regular";
+    margin: 4px 8px;
+}
+.menu ul li a:hover {
+    color: $corpadraoescuro;
+    text-decoration: none;
+}
+.logo {
+    width: 23%;
+    float: left;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 10px;
+}
+.menu nav {
+    float: right;
+}
+img {
+    width: 100%;
+}
+.home-page section.topomenu {
+    padding: 1em 0em;
+
+}
+.home-page .color-1 {
+    background: #fff;
+}
+
+
+/*desabilitando o menu responsivo na tela de descktop*/
+.menu-boostrap-responsivo {
+    display: none;
+}
+.logo-responsivo img{
+    width: 100%;
+    margin-top: -10px;
+}
+.logo-responsivo {
+    width: 65%;
+    margin: 0px 0px 0px 0px;
+}
+.portifolio-row {
+    padding: 10px 40px 10px 40px;
+}
+.portifolio-row h1 {
+    text-align: center;
+    color: $preto;
+}
+.services-row h1 {
+    text-align: center;
+    color: $preto;
+}
+.backgraund-rodape {
+    background: $preto;
+}
+backgraund-main {
+    background: $fundoportifolio;
+}
+ul {
+    list-style-type: none;
+}
+.menu-rodape nav a {
+    font-size: 1.2em;
+    margin: 6px 25px;
+    &:hover{
+        text-decoration: none;
+        color: $azulmenu;
+    }
+}
+
+/*SOB MENUS*/
+nav ul ul {
+    display: none;
+    z-index: 9999;
+}
+li:hover ul, .menu li.over ul{display:block;}
+nav ul li:hover > ul {
+    display: block;
+    position: absolute;
+    width: 134%;
+    float: left;
+    top: 92%;
+    left: -21%;
+    background: #ffffff;
+    text-align: center;
+
+}
+.topomenu nav ul li:hover > ul li {
+    width: 100%;
+
+}
+.topomenu li ul {
+    position:absolute;
+    display:none;
+}
+.topomenu ul > li > ul > li {
+    width: 100%;
+}
+
+.topomenu ul > li > ul > li > a:hover {
+    width: 100%;
+}
+.topomenu ul > li > ul > li > a {
+    text-align: center;
+    width: 100%;
+
+}
+.topomenu ul li {
+    position: relative;
+    float: left;
+}
+.topomenu ul li a:hover {
+    border-radius: 7px;
+}
+.breadcrumb {
+    background-color: $preto !important;
+    & li a {
+        color: #0043ff;
+    }
+}
+.titulopadrao h1 {
+    color: $preto
+}
+.portifolio-row.dentropage {
+    padding: 10px 40px 40px 40px;
+}
+
+
+// criação das figuras imgs
+.column {
+    margin: 15px 15px 0;
+    padding: 0;
+}
+.column:last-child {
+    padding-bottom: 60px;
+}
+.column::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.column div {
+    // position: relative;
+    // float: left;
+    // width: 353px;
+    // height: 200px;
+    // margin: 0 0 0 25px;
+    // padding: 0;
+}
+.column div:first-child {
+    margin-left: 0;
+}
+.column div span {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    z-index: 1;
+    display: block;
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    padding: 5px 0;
+    background-color: #fff;
+}
+figure {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+    float: left;
+}
+figure:hover+span {
+    opacity: 1;
+}
+// adicionando um hover
+/* Gray Scale */
+.hover08 figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    float: left;
+}
+.hover08 figure:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+.grid figure img {
+    border: 2px solid #000;
+}
+.services-row-page h1 {
+    text-align: left;
+    color: #000;
+}
+.yl-header {
+    background-image: url(../images/capayoutube.png);
+    background-position: center;
+    background-size: cover;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+footer {
+  color: $claro;
+  text-align: center;
+  padding: 50px 0;
+  p {
+    margin: 20px;
+  }
+  a {
+    text-decoration: nome;
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img{
+        height: 400px;
+        object-fit: cover;
+        object-position: center; 
+    }
+}
