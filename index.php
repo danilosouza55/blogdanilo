@@ -48,21 +48,6 @@
                 </a>
             </div>
         </div>
-        <section class="color-1 topomenu">
-            <nav class="menu cl-effect-1 wow fadeInRight">
-                <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="sobre">QUEM SOU</a></li>
-                    <li><a href="#">PORTIFOLIO</a>
-                        <ul class="submenu-descktop">
-                            <li><a href="fotos">FOTOS</a>
-                            <li><a href="videos">VIDEOS</a>
-                        </ul>
-                    </li>
-                    <li><a href="contato">CONTATO</a></li>
-                </ul>
-            </nav>
-        </section>
     </div>
 </div>
 <!-- menu do boostrap -->
@@ -104,7 +89,6 @@
 
 <main class="backgraund-main">
     <?php
-//    print_r( $_GET );
 
     if (isset($_GET["p"])) {
         //se o parametro p existe
@@ -134,7 +118,8 @@
 <footer class="backgraund-rodape">
     <div class="container menu-rodape wow fadeInDownBig">
         </p>
-        <p>Desenvolvido por Danilo A. Souza</p>
+        <p>Desenvolvido por Danilo Araújo de Souza</p>
+        <p>danilo.souza@edu.unipar.br</p>
     </div>
 </footer>
 
